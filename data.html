@@ -65,7 +65,7 @@
 	function getCommits(path) {
 		var contributions = {};
 		var prefix = 'https://api.github.com/repos/';
-		var suffix = '/commits?'+path;
+		var suffix = '/commits?path='+path;
 		var loc = URL.split('.com/')[1];
 
 		var rurl = prefix+loc+suffix;
@@ -73,19 +73,19 @@
 		request.open('GET', rurl, false);
 		request.send();
 
-		console.log(path);
+		// console.log(path);
 
 		var response = JSON.parse(request.response);
 
-		console.log(response);
+		// console.log(response);
 
 		for (var i = 0; i < response.length; ++i) {
 			var detailsURL = response[i].url;
-			request = new XMLHttpRequest();
-			request.open('GET', detailsURL, false);
-			request.send();
-			var details = JSON.parse(request.response);
-			console.log(details);
+			var detailsRequest = new XMLHttpRequest();
+			detailsRequest.open('GET', detailsURL, false);
+			detailsRequest.send();
+			var details = JSON.parse(detailsRequest.response);
+			// console.log(details);
 			var user = details.committer.login;
 			var files = details.files;
 			for (var j = 0; j < files.length; ++j) {
@@ -126,7 +126,7 @@
 		for (var i = 0; i < node.files.length; ++i) {
 			node.contributions = combineContributions(node.contributions, 
 				getContributions(node.files[i]));
-			break;
+			// break;
 		}
 		return node.contributions;
 	}
