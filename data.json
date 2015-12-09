@@ -1,0 +1,560 @@
+{
+    "path": "/labella.js",
+    "files": [
+        {
+            "path": "/labella.js/bower.json",
+            "files": [],
+            "contributions": {
+                "kwongsuphasawat": 70
+            }
+        },
+        {
+            "path": "/labella.js/CHANGELOG.md",
+            "files": [],
+            "contributions": {
+                "kwongsuphasawat": 18
+            }
+        },
+        {
+            "path": "/labella.js/CONTRIBUTING.md",
+            "files": [],
+            "contributions": {
+                "kwongsuphasawat": 17
+            }
+        },
+        {
+            "path": "/labella.js/dist",
+            "files": [
+                {
+                    "path": "/labella.js/dist/labella.js",
+                    "files": [],
+                    "contributions": {
+                        "nathaniel": 82,
+                        "krist": 164,
+                        "kwongsuphasawat": 2957
+                    }
+                },
+                {
+                    "path": "/labella.js/dist/labella.min.js",
+                    "files": [],
+                    "contributions": {
+                        "nathaniel": 2,
+                        "krist": 4,
+                        "kwongsuphasawat": 23
+                    }
+                }
+            ],
+            "contributions": {
+                "nathaniel": 84,
+                "krist": 168,
+                "kwongsuphasawat": 2980
+            }
+        },
+        {
+            "path": "/labella.js/docs",
+            "files": [
+                {
+                    "path": "/labella.js/docs/Development.md",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 67
+                    }
+                },
+                {
+                    "path": "/labella.js/docs/Force.md",
+                    "files": [],
+                    "contributions": {
+                        "nathaniel": 4,
+                        "kwongsuphasawat": 107
+                    }
+                },
+                {
+                    "path": "/labella.js/docs/Node.md",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 86
+                    }
+                },
+                {
+                    "path": "/labella.js/docs/Renderer.md",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 89
+                    }
+                }
+            ],
+            "contributions": {
+                "nathaniel": 4,
+                "kwongsuphasawat": 349
+            }
+        },
+        {
+            "path": "/labella.js/examples",
+            "files": [
+                {
+                    "path": "/labella.js/examples/basic_down.html",
+                    "files": [],
+                    "contributions": {
+                        "krist": 3,
+                        "kwongsuphasawat": 203
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/basic_left.html",
+                    "files": [],
+                    "contributions": {
+                        "krist": 3,
+                        "kwongsuphasawat": 204
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/basic_right.html",
+                    "files": [],
+                    "contributions": {
+                        "krist": 3,
+                        "kwongsuphasawat": 204
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/basic_up.html",
+                    "files": [],
+                    "contributions": {
+                        "krist": 3,
+                        "kwongsuphasawat": 204
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/cola.html",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 84
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/favicon.ico",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 1
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/images",
+                    "files": [
+                        {
+                            "path": "/labella.js/examples/images/thumbnail.png",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 1
+                            }
+                        }
+                    ],
+                    "contributions": {
+                        "kwongsuphasawat": 1
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/index.html",
+                    "files": [],
+                    "contributions": {
+                        "nathaniel": 4,
+                        "krist": 7,
+                        "kwongsuphasawat": 213
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/js",
+                    "files": [
+                        {
+                            "path": "/labella.js/examples/js/demo.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 101
+                            }
+                        },
+                        {
+                            "path": "/labella.js/examples/js/horizontalTimeline.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 103
+                            }
+                        },
+                        {
+                            "path": "/labella.js/examples/js/sampleData.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 19
+                            }
+                        },
+                        {
+                            "path": "/labella.js/examples/js/share.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 3
+                            }
+                        }
+                    ],
+                    "contributions": {
+                        "kwongsuphasawat": 226
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/style.css",
+                    "files": [],
+                    "contributions": {
+                        "krist": 4,
+                        "kwongsuphasawat": 160
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/with_text2.html",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 208
+                    }
+                },
+                {
+                    "path": "/labella.js/examples/with_text.html",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 198
+                    }
+                }
+            ],
+            "contributions": {
+                "nathaniel": 4,
+                "krist": 23,
+                "kwongsuphasawat": 1906
+            }
+        },
+        {
+            "path": "/labella.js/grunt",
+            "files": [
+                {
+                    "path": "/labella.js/grunt/aliases.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 58
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/bump.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 18
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/clean.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 23
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/concat.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 10
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/connect.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 18
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/copy.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 6
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/gh-pages.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 9
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/karma.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 10
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/requirejs.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 28
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/shell.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 8
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/uglify.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 15
+                    }
+                },
+                {
+                    "path": "/labella.js/grunt/watch.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 14
+                    }
+                }
+            ],
+            "contributions": {
+                "kwongsuphasawat": 217
+            }
+        },
+        {
+            "path": "/labella.js/Gruntfile.js",
+            "files": [],
+            "contributions": {
+                "kwongsuphasawat": 35
+            }
+        },
+        {
+            "path": "/labella.js/karma.conf.js",
+            "files": [],
+            "contributions": {
+                "kwongsuphasawat": 80
+            }
+        },
+        {
+            "path": "/labella.js/labella.sublime-project",
+            "files": [],
+            "contributions": {
+                "kwongsuphasawat": 23
+            }
+        },
+        {
+            "path": "/labella.js/LICENSE",
+            "files": [],
+            "contributions": {
+                "kwongsuphasawat": 13
+            }
+        },
+        {
+            "path": "/labella.js/package.json",
+            "files": [],
+            "contributions": {
+                "kwongsuphasawat": 74
+            }
+        },
+        {
+            "path": "/labella.js/README.md",
+            "files": [],
+            "contributions": {
+                "nathaniel": 9,
+                "krist": 11,
+                "james,": 2,
+                "kwongsuphasawat": 135
+            }
+        },
+        {
+            "path": "/labella.js/src",
+            "files": [
+                {
+                    "path": "/labella.js/src/core",
+                    "files": [
+                        {
+                            "path": "/labella.js/src/core/distributor.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 271
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/core/force.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 295
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/core/helper.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 51
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/core/metrics.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 178
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/core/nodeGroup.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 125
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/core/node.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 185
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/core/node.spec.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 46
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/core/physics",
+                            "files": [
+                                {
+                                    "path": "/labella.js/src/core/physics/coulomb.js",
+                                    "files": [],
+                                    "contributions": {
+                                        "kwongsuphasawat": 24
+                                    }
+                                },
+                                {
+                                    "path": "/labella.js/src/core/physics/spring.js",
+                                    "files": [],
+                                    "contributions": {
+                                        "kwongsuphasawat": 22
+                                    }
+                                }
+                            ],
+                            "contributions": {
+                                "kwongsuphasawat": 46
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/core/renderer.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 334
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/core/simulator.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 320
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/core/util.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 160
+                            }
+                        }
+                    ],
+                    "contributions": {
+                        "kwongsuphasawat": 2011
+                    }
+                },
+                {
+                    "path": "/labella.js/src/labella.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 34
+                    }
+                },
+                {
+                    "path": "/labella.js/src/lib",
+                    "files": [
+                        {
+                            "path": "/labella.js/src/lib/d3Dispatch.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 153
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/lib/d3Rebind.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 28
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/lib/extend.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 123
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/lib/intervalTree.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 326
+                            }
+                        },
+                        {
+                            "path": "/labella.js/src/lib/sortedList.js",
+                            "files": [],
+                            "contributions": {
+                                "kwongsuphasawat": 229
+                            }
+                        }
+                    ],
+                    "contributions": {
+                        "kwongsuphasawat": 859
+                    }
+                },
+                {
+                    "path": "/labella.js/src/prefix.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 30
+                    }
+                },
+                {
+                    "path": "/labella.js/src/suffix.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 7
+                    }
+                }
+            ],
+            "contributions": {
+                "kwongsuphasawat": 2941
+            }
+        },
+        {
+            "path": "/labella.js/test",
+            "files": [
+                {
+                    "path": "/labella.js/test/karma-main.js",
+                    "files": [],
+                    "contributions": {
+                        "kwongsuphasawat": 52
+                    }
+                }
+            ],
+            "contributions": {
+                "kwongsuphasawat": 52
+            }
+        }
+    ],
+    "contributions": {
+        "nathaniel": 101,
+        "krist": 202,
+        "james,": 2,
+        "kwongsuphasawat": 8910
+    }
+}

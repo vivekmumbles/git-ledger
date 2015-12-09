@@ -1,24 +1,38 @@
 
 import os
 import re
+import json
+import pprint
 
 EMPTY = '4b825dc642cb6eb9a060e54bf8d69288fbee4904'
 
-log = os.popen('git log').read().split('\n')
+repo = str(input('Enter clone url to git repo: '))
+
+repo_folder = repo.split('/')[-1].split('.git')[0]
+
+os.system('git clone ' + repo)
+os.system('cd ' + repo_folder)
+
+log = os.popen('git --git-dir ./' + repo_folder + '/.git log').read().split('\n')
+# log = os.popen('git log').read().split('\n')
 log = list(filter(lambda x: re.match('commit [0-9a-f]{5,40}',x) != None or x[:6] == 'Author', log))
 log = list(map(lambda x: x.split(' ')[1].lower() if x[:6] == 'Author' else x.split(' ')[1], log))
 log = list(zip(log[1:len(log):2], log[0:len(log):2]))
 activity = dict(map(lambda x: (x[0], {}), log))
 for i in range(len(log)):
 	if i < len(log)-1:
-		out = os.popen('git diff '+log[i][1]+' '+log[i+1][1]+' --numstat').read().split('\n')
+		out = os.popen('git --git-dir ./' + repo_folder + '/.git diff '+log[i][1]+' '+log[i+1][1]+' --numstat').read().split('\n')
+		# out = os.popen('git diff '+log[i][1]+' '+log[i+1][1]+' --numstat').read().split('\n')
 	else:
-		out = os.popen('git diff '+log[i][1]+' '+EMPTY+' --numstat').read().split('\n')
+		out = os.popen('git --git-dir ./' + repo_folder + '/.git diff '+log[i][1]+' '+EMPTY+' --numstat').read().split('\n')
+		# out = os.popen('git diff '+log[i][1]+' '+EMPTY+' --numstat').read().split('\n')
 	user = log[i][0]
 	for o in out[:-1]:
 		ol = o.split('\t')
-		changes = int(ol[0])+int(ol[1])
-		k = '/'+ol[2]
+		changes = 1
+		if ol[0] != '-' and ol[1] != '-':
+			changes = int(ol[0])+int(ol[1])
+		k = '/'+repo_folder+'/'+ol[2]
 		if k in activity[user]:
 			activity[user][k] += changes
 		else:
@@ -28,7 +42,7 @@ for i in range(len(log)):
 
 # for l in log: print(l)
 
-rootDir = '.'
+rootDir = './'+repo_folder
 fileList = []
 
 cmd = """ls -R """+rootDir+""" | awk '/:$/&&f{s=$0;f=0}/:$/&&!f{sub(/:$/,"");s=$0;f=1;next}NF&&f{ print s"/"$0 }'"""
@@ -90,13 +104,15 @@ def getContributions(node):
 		node.contributions = combineDicts(node.contributions, getContributions(c))
 	return node.contributions
 
-root = Node('/')
+root = Node('/'+repo_folder)
 populateTree(root, fileList)
 getContributions(root)
 
-import json
-import pprint
-
 json = json.dumps(root, default=lambda o: o.__dict__, sort_keys=False, indent=4, separators=(',', ': '))
 
-print(json)
+os.system('rm -rf ' + repo_folder)
+
+# print(json)
+output = open('data.json','w')
+output.write(json)
+output.close()
