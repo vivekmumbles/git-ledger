@@ -2,6 +2,14 @@
 
 github repo visualization tool
 
+[demo](http://vivekmumbles.github.io/git-ledger/viz.html)
+
+## demo instructions
+
+press `space` to view contributions for entire folder
+`alt` key is shortcut for going back, the left arrow does the same thing
+pressing `enter` after typing in directory is a short cut of going to that directory, the right arrow does the same thing
+
 ## usage
 
 run:
