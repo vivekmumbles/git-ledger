@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>git ledger</title>
+	
+	<script src="js/d3/d3.js"></script>
+	<script src="js/StackBlur.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/flatly2-bootstrap.css">
+
+	<style type="text/css">
+
+	body {
+		margin: 0px;
+		background-color: #303030;
+		overflow: hidden;
+	}
+
+	h3 {
+		color: #00BC8C;
+		text-align: center;
+	}
+
+	#controls {
+		text-align: center;
+	}
+
+	.arrow {
+		fill: #f39c12;
+	}
+
+	#back-btn {
+		transform: rotate(180deg);
+		cursor: pointer;
+	}
+
+	#fwrd-btn {
+		cursor: pointer;
+	}
+
+	#info {
+		width: 100%;
+		height: 4%;
+		position: fixed;
+		bottom: 0px;
+		background-color: rgba(255,255,255,.2);
+		text-align: left;
+		padding-left: 2%;
+		color: ghostwhite;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="content">
+		<h3>git-ledger</h3>
+		<div id="controls">
+			<img id="back-btn" class="arrow" src="./imgs/arrow.svg">
+			<input id="navbar" type="text" value="/">
+			<img id="fwrd-btn" class="arrow" src="./imgs/arrow.svg">
+		</div>
+		<canvas id="canvas">your browser doesn't support HTML5 canvas.</canvas>
+		<div id="info"></div>
+	</div>
+	<script type="text/javascript">
+
+	var width;
+	var height;
+
+	var canvas;
+	var ctx;
+
+	var navbar;
+	var backBtn;
+	var fwrdBtn;
+	var info;
+
+	var data;
+	var tol = .01;
+
+	var pad = 2;
+	var hover = [-1, -1];
+	var folderflag = false;
+
+	var fnodes;
+
+	var curdir;
+	var contribdirs = [];
+
+	var prev = Number.MIN_SAFE_INTEGER;
+	var change = prev+1; 
+
+	function initTreeMap() {
+		treemap = d3.layout.treemap()
+		.size([width, height])
+		.sticky(true)
+		.value(function(d) { return d.value; })
+		.sort(function(a, b) { return a.value - b.value; });
+	}
+
+	function copyobj(data) {
+		return JSON.parse(JSON.stringify(data));
+	}
+
+	function getContribData(path, data) {
+		if (data.path === path) {
+			var rdata = {};
+			rdata.name = data.path;
+			rdata.value = data.value;
+			rdata.children = data.contributions;
+			return rdata;
+		}
+		var rdata = null;
+		for (var i = 0; i < data.files.length; ++i) {
+			rdata = getContribData(path, data.files[i]);
+			if (rdata !== null) break;
+		}
+		return rdata;
+	}
+
+	function formatFiles(files) {
+		var ff = [];
+		for (var i = 0; i < files.length; ++i) {
+			var obj = {};
+			obj.name = files[i].path;
+			obj.value = files[i].value;
+			ff.push(obj);
+		}
+		return ff;
+	}
+
+	function getFileData(path, data) {
+		if (data.path === path) {
+			var rdata = {};
+			rdata.name = data.path;
+			rdata.value = data.value;
+			if (data.files.length === 0) {
+				rdata.children = [{'name': data.path, 'value': data.value}];
+			} else {
+				rdata.children = formatFiles(data.files);
+			}
+			return rdata;
+		}
+		var rdata = null;
+		for (var i = 0; i < data.files.length; ++i) {
+			rdata = getFileData(path, data.files[i]);
+			if (rdata !== null) break;
+		}
+		return rdata;
+	}
+
+	function renderFiles(data) {
+
+		var fdata = getFileData(curdir, data);
+		if (fdata === null) console.error('unable to get file render data.');
+
+		var ftreemap = d3.layout.treemap()
+		.size([width, height])
+		.sticky(true)
+		.value(function(d) { return d.value; })
+		.sort(function(a, b) { return a.value - b.value; });
+
+		if (prev !== change) {
+			fnodes = ftreemap.nodes(fdata).slice(1);
+			prev = change;
+		}
+
+		var update = [];
+		for (var i = 0; i < fnodes.length; ++i) {
+			var n = fnodes[i];
+
+			var bgcolor = '#CCCCCC';
+			var txtcolor = '#303030';
+			if (n.x <= hover[0] && hover[0] <= n.x+n.dx && n.y <= hover[1] && hover[1] <= n.y+n.dy && folderflag === false) {
+				bgcolor = 'rgba(255,255,255,.6)';
+				txtcolor = '#333333';
+				info.innerText = n.name;
+			}
+
+			ctx.fillStyle = bgcolor;
+			ctx.fillRect(n.x, n.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad));
+			ctx.fillStyle = txtcolor;
+			var fs = Math.min(n.dx/Math.max(16, n.name.length), n.dy/4);
+			ctx.font = fs + 'px monospace';
+			ctx.textAlign = 'center';
+			ctx.textBaseline = 'middle';
+			ctx.fillText(n.name, n.x + n.dx/2, n.y + n.dy/2);
+
+			if (findObjByName(contribdirs, n.name) !== -1) {
+				update.push(n);
+			}
+		}
+
+		contribdirs = update;
+	}
+
+	function renderContrib(data) {
+
+		for (var i = 0; i < contribdirs.length; ++i) {
+			var dir = contribdirs[i];
+			var cdata = getContribData(dir.name, data);
+			if (cdata === null) console.error('unable to get contrib render data.');
+
+			var ctreemap = d3.layout.treemap()
+			.size([dir.dx, dir.dy])
+			.sticky(true)
+			.value(function(d) { return d.value; })
+			.sort(function(a, b) { return a.value - b.value; });
+
+			var cnodes = ctreemap.nodes(cdata).slice(1);
+
+			for (var j = 0; j < cnodes.length; ++j) {
+				var n = cnodes[j];
+
+				var bgcolor = 'rgba(48,48,48,.8)';
+				var txtcolor = '#CCCCCC';
+				if (n.x <= hover[0] && hover[0] <= n.x+n.dx && n.y <= hover[1] && hover[1] <= n.y+n.dy && folderflag === false) {
+					bgcolor = 'rgba(72,72,72,.8)';
+					txtcolor = '#dddddd';
+					info.innerText = n.name + ' - ' + n.value + ' changes - ' + (n.value/n.parent.value*100).toPrecision(3) + '%';
+				}
+
+				stackBlurCanvasRGBA('canvas', n.x+dir.x, n.y+dir.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad), Math.log(n.area));
+				ctx.fillStyle = bgcolor;
+				ctx.fillRect(n.x+dir.x, n.y+dir.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad));
+				ctx.fillStyle = txtcolor;
+				var fs = Math.min(n.dx/Math.max(16, n.name.length), n.dy/4);
+				ctx.font = fs + 'px monospace';
+				ctx.textAlign = 'center';
+				ctx.textBaseline = 'middle';
+				ctx.fillText(n.name, n.x + dir.x + n.dx/2, n.y + dir.y + n.dy/2);
+				ctx.font = fs/2 + 'px monospace';
+				ctx.fillText(n.value + ' changes, ' + (n.value/n.parent.value*100).toPrecision(3) + '%', n.x + dir.x + n.dx/2, n.y + dir.y + n.dy/2 + fs);
+			}
+		}
+		
+	}
+
+	function renderFolder(data) {
+		var cdata = getContribData(curdir, data);
+		if (cdata === null) console.error('unable to get contrib render data.');
+
+		var ctreemap = d3.layout.treemap()
+		.size([width, height])
+		.sticky(true)
+		.value(function(d) { return d.value; })
+		.sort(function(a, b) { return a.value - b.value; });
+
+		var cnodes = ctreemap.nodes(cdata).slice(1);
+
+		for (var j = 0; j < cnodes.length; ++j) {
+			var n = cnodes[j];
+
+			var bgcolor = 'rgba(48,48,48,.8)';
+			var txtcolor = '#CCCCCC';
+			if (n.x <= hover[0] && hover[0] <= n.x+n.dx && n.y <= hover[1] && hover[1] <= n.y+n.dy) {
+				bgcolor = 'rgba(72,72,72,.8)';
+				txtcolor = '#dddddd';
+				info.innerText = n.name + ' - ' + n.value + ' changes - ' + (n.value/n.parent.value*100).toPrecision(3) + '%';
+			}
+
+			stackBlurCanvasRGBA('canvas', n.x, n.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad), Math.log(n.area));
+			ctx.fillStyle = bgcolor;
+			ctx.fillRect(n.x, n.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad));
+			ctx.fillStyle = txtcolor;
+			var fs = Math.min(n.dx/Math.max(16, n.name.length), n.dy/4);
+			ctx.font = fs + 'px monospace';
+			ctx.textAlign = 'center';
+			ctx.textBaseline = 'middle';
+			ctx.fillText(n.name, n.x + n.dx/2, n.y + n.dy/2);
+			ctx.font = fs/2 + 'px monospace';
+			ctx.fillText(n.value + ' changes, ' + (n.value/n.parent.value*100).toPrecision(3) + '%', n.x + n.dx/2, n.y + n.dy/2 + fs);
+		}
+	}
+
+	function render() {
+
+		ctx.clearRect(0, 0, width, height);
+
+		if (folderflag === true) {
+			renderFiles(data);
+			renderFolder(data);
+			return;
+		}
+
+		navbar.value = curdir;
+		navbar.style.border = '';
+		navbar.blur();
+
+		renderFiles(data);
+
+		renderContrib(data);
+
+	}
+
+	function goback() {
+		var dir = '';
+		var split = curdir.split('/').slice(1);
+		for (var i = 0; i < split.length-1; ++i) {
+			dir += '/'+split[i];
+		}
+		curdir = (dir.length > 0) ? dir : data.path;
+		folderflag = false;
+		change++;
+		render();
+	}
+
+	function go() {
+		curdir = navbar.value;
+		folderflag = false;
+		change++;
+		render();
+	}
+
+	function hoverListener(e) {
+		var br = canvas.getBoundingClientRect();
+		var x = e.clientX - br.left;
+		var y = e.clientY - br.top;
+		hover = [x, y];
+		render();
+	}
+
+	function leftClickListener(e) {
+		var br = canvas.getBoundingClientRect();
+		var x = e.clientX - br.left;
+		var y = e.clientY - br.top;
+
+		for (var i = 0; i < fnodes.length; ++i) {
+			var n = fnodes[i];
+			if (n.x <= x && x <= n.x+n.dx-pad && n.y <= y && y <= n.y+n.dy-pad) {
+				curdir = n.name;
+			}
+		}
+		change++;
+		render();
+	}
+
+	function findObjByName(objs, name) {
+		for (var i = 0; i < objs.length; ++i) {
+			if (objs[i].name === name) return i;
+		}
+		return -1;
+	}
+
+	function rightClickListener(e) {
+		e.preventDefault();
+
+		var br = canvas.getBoundingClientRect();
+		var x = e.clientX - br.left;
+		var y = e.clientY - br.top;
+
+		for (var i = 0; i < fnodes.length; ++i) {
+			var n = fnodes[i];
+			if (n.x <= x && x <= n.x+n.dx-pad && n.y <= y && y <= n.y+n.dy-pad) {
+				var idx = findObjByName(contribdirs, n.name);
+				if (idx !== -1) {
+					contribdirs.splice(idx, 1);
+				} else {
+					contribdirs.push(n);
+				}
+			}
+		}
+		render();
+	}
+
+	function resizeNavBar() {
+		var controls = document.getElementById('controls');
+		controls.clientHeight = window.innerHeight*.15 + 'px';
+
+		navbar.style.width = width*.6 + 'px';
+
+		var btnSize = navbar.clientHeight*1.2;
+
+		backBtn.style.width =  btnSize+ 'px';
+		backBtn.style.marginBottom = btnSize/4 + 'px';
+
+		fwrdBtn.style.width = btnSize + 'px';
+		fwrdBtn.style.marginBottom = btnSize/4 + 'px';
+
+		info.style.lineHeight = info.clientHeight + 'px';
+		info.style.fontSize = info.clientHeight*.75 + 'px';
+	}
+
+	function resize() {
+
+		width  = window.innerWidth*.8;
+		height = window.innerHeight*.8;
+		var size = Math.min(width, height);
+		// width = size;
+		// height = size;
+		canvas.width = width;
+		canvas.height = height;
+		canvas.style.width = width + 'px';
+		canvas.style.height = height + 'px';
+		canvas.style.marginLeft = (window.innerWidth - width)*.5 + 'px';
+
+		resizeNavBar();
+		change++;
+		render();
+	}
+
+	function sumkeys(obj) {
+		var s = 0;
+		var keys = Object.keys(obj);
+		for (var i = 0; i < keys.length; ++i) {
+			s += obj[keys[i]];
+		}
+		return s;
+	}
+
+	function formatData(data) {
+		var keys = Object.keys(data.contributions);
+		var fc = [];
+		var sum = sumkeys(data.contributions);
+		var value = 0;
+		for (var i = 0; i < keys.length; ++i) {
+			if (data.contributions[keys[i]]/sum >= tol) {
+				var o = {};
+				o.name = keys[i];
+				o.value = data.contributions[keys[i]];
+				value += data.contributions[keys[i]];
+				fc.push(o);
+			}
+		}
+		data.contributions = fc;
+		data.value = value;
+		if (data.files.length === 0) {
+			return;
+		}
+		for (var i = 0; i < data.files.length; ++i) {
+			formatData(data.files[i]);
+		}
+		return;
+	}
+
+	function init() {
+		canvas = document.getElementById('canvas');
+		ctx = canvas.getContext('2d');
+
+		canvas.oncontextmenu = rightClickListener;
+		canvas.onclick = leftClickListener;
+
+		canvas.onmousemove = hoverListener;
+		canvas.onmouseleave = function(e) { hover = [-1, -1]; info.innerText = curdir; render(); };
+
+		navbar = document.getElementById('navbar');
+		backBtn = document.getElementById('back-btn');
+		fwrdBtn = document.getElementById('fwrd-btn');
+		info = document.getElementById('info');
+
+
+		navbar.onkeyup = function(e) {
+			var key = e.keyCode;
+			if (getFileData(navbar.value, data) === null) {
+				navbar.style.border = '2px solid #e74c3c';
+			} else {
+				navbar.style.border = '';
+				if (key === 13) go();
+			}
+		};
+		backBtn.onclick = goback;
+		fwrdBtn.onclick = go;
+
+		window.onkeyup = function(e) {
+			var key = e.keyCode;
+			if (document.activeElement === document.body) {
+				if (key === 18) goback();
+				else if (key === 32) {
+					folderflag = !folderflag;
+					render();
+				}
+			}
+		};
+
+		d3.json('data.json', function(error, response) {
+			if (error) throw error;
+			data = response;
+			formatData(data);
+			curdir = data.path;
+			info.innerText = curdir;
+			initTreeMap();
+			resize();
+			navbar.value = curdir;
+		});
+	}
+
+	window.onresize = resize;
+
+	window.onload = init;
+
+	</script>
+</body>
+</html>
