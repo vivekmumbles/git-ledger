@@ -1,560 +1,1175 @@
 {
-    "path": "/labella.js",
     "files": [
         {
-            "path": "/labella.js/bower.json",
-            "files": [],
-            "contributions": {
-                "kwongsuphasawat": 70
-            }
-        },
-        {
-            "path": "/labella.js/CHANGELOG.md",
-            "files": [],
-            "contributions": {
-                "kwongsuphasawat": 18
-            }
-        },
-        {
-            "path": "/labella.js/CONTRIBUTING.md",
-            "files": [],
-            "contributions": {
-                "kwongsuphasawat": 17
-            }
-        },
-        {
-            "path": "/labella.js/dist",
             "files": [
                 {
-                    "path": "/labella.js/dist/labella.js",
                     "files": [],
+                    "path": "/UglifyJS/bin/uglifyjs",
                     "contributions": {
-                        "nathaniel": 82,
-                        "krist": 164,
-                        "kwongsuphasawat": 2957
-                    }
-                },
-                {
-                    "path": "/labella.js/dist/labella.min.js",
-                    "files": [],
-                    "contributions": {
-                        "nathaniel": 2,
-                        "krist": 4,
-                        "kwongsuphasawat": 23
+                        "ikokostya": 4,
+                        "cadorn": 18,
+                        "emil": 27,
+                        "robert": 9,
+                        "mal": 2,
+                        "tav": 30,
+                        "paul": 9,
+                        "eirikur": 6,
+                        "mihai": 1198,
+                        "tim": 46,
+                        "michael": 2,
+                        "jez": 3,
+                        "johnjbarton": 15,
+                        "nick": 3,
+                        "isaac": 2
                     }
                 }
             ],
+            "path": "/UglifyJS/bin",
             "contributions": {
-                "nathaniel": 84,
-                "krist": 168,
-                "kwongsuphasawat": 2980
+                "paul": 9,
+                "cadorn": 18,
+                "jez": 3,
+                "robert": 9,
+                "mal": 2,
+                "tav": 30,
+                "eirikur": 6,
+                "mihai": 1198,
+                "ikokostya": 4,
+                "michael": 2,
+                "emil": 27,
+                "nick": 3,
+                "johnjbarton": 15,
+                "isaac": 2,
+                "tim": 46
             }
         },
         {
-            "path": "/labella.js/docs",
+            "files": [],
+            "path": "/UglifyJS/docstyle.css",
+            "contributions": {
+                "mihai": 79
+            }
+        },
+        {
             "files": [
                 {
-                    "path": "/labella.js/docs/Development.md",
                     "files": [],
+                    "path": "/UglifyJS/lib/consolidator.js",
                     "contributions": {
-                        "kwongsuphasawat": 67
+                        "paul": 1384,
+                        "robert": 2599,
+                        "mihai": 2759
                     }
                 },
                 {
-                    "path": "/labella.js/docs/Force.md",
                     "files": [],
+                    "path": "/UglifyJS/lib/parse-js.js",
                     "contributions": {
-                        "nathaniel": 4,
-                        "kwongsuphasawat": 107
+                        "thorn0": 4,
+                        "cadorn": 64,
+                        "quildreen": 2,
+                        "robert": 37,
+                        "micka\u00ebl": 2,
+                        "wolfgang": 18,
+                        "paul": 26,
+                        "eirikur": 19,
+                        "thomas": 2,
+                        "mihai": 6574,
+                        "ikokostya": 11,
+                        "mal": 33,
+                        "whyme.lyu": 4,
+                        "ville": 2,
+                        "johnjbarton": 49
                     }
                 },
                 {
-                    "path": "/labella.js/docs/Node.md",
                     "files": [],
+                    "path": "/UglifyJS/lib/process.js",
                     "contributions": {
-                        "kwongsuphasawat": 86
+                        "cadorn": 90,
+                        "emil": 484,
+                        "mal": 44,
+                        "andrey": 5,
+                        "eirikur": 12,
+                        "slavic": 9,
+                        "jann": 15,
+                        "mihai": 10380,
+                        "tim": 36,
+                        "mathias": 4,
+                        "naomi": 1,
+                        "ville": 3,
+                        "nick": 1,
+                        "satyr": 15,
+                        "matt": 87,
+                        "richard": 11,
+                        "paul": 92,
+                        "chrisk": 4,
+                        "robert": 49,
+                        "ikokostya": 23,
+                        "fintan": 2,
+                        "michael": 10,
+                        "marijn": 16,
+                        "jez": 1,
+                        "jason": 4,
+                        "johnjbarton": 349,
+                        "cedric": 13,
+                        "joseph": 1
                     }
                 },
                 {
-                    "path": "/labella.js/docs/Renderer.md",
                     "files": [],
+                    "path": "/UglifyJS/lib/squeeze-more.js",
                     "contributions": {
-                        "kwongsuphasawat": 89
+                        "ikokostya": 29,
+                        "robert": 4,
+                        "mihai": 257
                     }
                 }
             ],
+            "path": "/UglifyJS/lib",
             "contributions": {
-                "nathaniel": 4,
-                "kwongsuphasawat": 349
+                "thorn0": 4,
+                "cadorn": 154,
+                "quildreen": 2,
+                "mal": 77,
+                "eirikur": 31,
+                "slavic": 9,
+                "thomas": 2,
+                "mihai": 19970,
+                "tim": 36,
+                "mathias": 4,
+                "whyme.lyu": 4,
+                "jann": 15,
+                "ville": 5,
+                "nick": 1,
+                "satyr": 15,
+                "matt": 87,
+                "richard": 11,
+                "andrey": 5,
+                "chrisk": 4,
+                "robert": 2689,
+                "micka\u00ebl": 2,
+                "wolfgang": 18,
+                "paul": 1502,
+                "naomi": 1,
+                "ikokostya": 63,
+                "fintan": 2,
+                "michael": 10,
+                "marijn": 16,
+                "jez": 1,
+                "jason": 4,
+                "johnjbarton": 398,
+                "cedric": 13,
+                "joseph": 1,
+                "emil": 484
             }
         },
         {
-            "path": "/labella.js/examples",
+            "files": [],
+            "path": "/UglifyJS/package.json",
+            "contributions": {
+                "ikokostya": 4,
+                "paul": 28,
+                "chris": 4,
+                "johnjbarton": 2,
+                "eirikur": 2,
+                "thomas": 6,
+                "mihai": 98
+            }
+        },
+        {
+            "files": [],
+            "path": "/UglifyJS/README.html",
+            "contributions": {
+                "johnjbarton": 90,
+                "eirikur": 90,
+                "mihai": 2950
+            }
+        },
+        {
+            "files": [],
+            "path": "/UglifyJS/README.org",
+            "contributions": {
+                "robert": 4,
+                "johnjbarton": 6,
+                "mal": 3,
+                "nick": 5,
+                "eirikur": 6,
+                "mihai": 914
+            }
+        },
+        {
             "files": [
                 {
-                    "path": "/labella.js/examples/basic_down.html",
                     "files": [],
+                    "path": "/UglifyJS/test/beautify.js",
                     "contributions": {
-                        "krist": 3,
-                        "kwongsuphasawat": 203
+                        "mihai": 58
                     }
                 },
                 {
-                    "path": "/labella.js/examples/basic_left.html",
                     "files": [],
+                    "path": "/UglifyJS/test/testconsolidator.js",
                     "contributions": {
-                        "krist": 3,
-                        "kwongsuphasawat": 204
+                        "paul": 1391,
+                        "mihai": 2780
                     }
                 },
                 {
-                    "path": "/labella.js/examples/basic_right.html",
                     "files": [],
+                    "path": "/UglifyJS/test/testparser.js",
                     "contributions": {
-                        "krist": 3,
-                        "kwongsuphasawat": 204
+                        "paul": 8,
+                        "mihai": 447
                     }
                 },
                 {
-                    "path": "/labella.js/examples/basic_up.html",
-                    "files": [],
-                    "contributions": {
-                        "krist": 3,
-                        "kwongsuphasawat": 204
-                    }
-                },
-                {
-                    "path": "/labella.js/examples/cola.html",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 84
-                    }
-                },
-                {
-                    "path": "/labella.js/examples/favicon.ico",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 1
-                    }
-                },
-                {
-                    "path": "/labella.js/examples/images",
                     "files": [
                         {
-                            "path": "/labella.js/examples/images/thumbnail.png",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 1
-                            }
-                        }
-                    ],
-                    "contributions": {
-                        "kwongsuphasawat": 1
-                    }
-                },
-                {
-                    "path": "/labella.js/examples/index.html",
-                    "files": [],
-                    "contributions": {
-                        "nathaniel": 4,
-                        "krist": 7,
-                        "kwongsuphasawat": 213
-                    }
-                },
-                {
-                    "path": "/labella.js/examples/js",
-                    "files": [
-                        {
-                            "path": "/labella.js/examples/js/demo.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 101
-                            }
-                        },
-                        {
-                            "path": "/labella.js/examples/js/horizontalTimeline.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 103
-                            }
-                        },
-                        {
-                            "path": "/labella.js/examples/js/sampleData.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 19
-                            }
-                        },
-                        {
-                            "path": "/labella.js/examples/js/share.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 3
-                            }
-                        }
-                    ],
-                    "contributions": {
-                        "kwongsuphasawat": 226
-                    }
-                },
-                {
-                    "path": "/labella.js/examples/style.css",
-                    "files": [],
-                    "contributions": {
-                        "krist": 4,
-                        "kwongsuphasawat": 160
-                    }
-                },
-                {
-                    "path": "/labella.js/examples/with_text2.html",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 208
-                    }
-                },
-                {
-                    "path": "/labella.js/examples/with_text.html",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 198
-                    }
-                }
-            ],
-            "contributions": {
-                "nathaniel": 4,
-                "krist": 23,
-                "kwongsuphasawat": 1906
-            }
-        },
-        {
-            "path": "/labella.js/grunt",
-            "files": [
-                {
-                    "path": "/labella.js/grunt/aliases.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 58
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/bump.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 18
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/clean.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 23
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/concat.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 10
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/connect.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 18
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/copy.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 6
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/gh-pages.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 9
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/karma.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 10
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/requirejs.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 28
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/shell.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 8
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/uglify.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 15
-                    }
-                },
-                {
-                    "path": "/labella.js/grunt/watch.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 14
-                    }
-                }
-            ],
-            "contributions": {
-                "kwongsuphasawat": 217
-            }
-        },
-        {
-            "path": "/labella.js/Gruntfile.js",
-            "files": [],
-            "contributions": {
-                "kwongsuphasawat": 35
-            }
-        },
-        {
-            "path": "/labella.js/karma.conf.js",
-            "files": [],
-            "contributions": {
-                "kwongsuphasawat": 80
-            }
-        },
-        {
-            "path": "/labella.js/labella.sublime-project",
-            "files": [],
-            "contributions": {
-                "kwongsuphasawat": 23
-            }
-        },
-        {
-            "path": "/labella.js/LICENSE",
-            "files": [],
-            "contributions": {
-                "kwongsuphasawat": 13
-            }
-        },
-        {
-            "path": "/labella.js/package.json",
-            "files": [],
-            "contributions": {
-                "kwongsuphasawat": 74
-            }
-        },
-        {
-            "path": "/labella.js/README.md",
-            "files": [],
-            "contributions": {
-                "nathaniel": 9,
-                "krist": 11,
-                "james,": 2,
-                "kwongsuphasawat": 135
-            }
-        },
-        {
-            "path": "/labella.js/src",
-            "files": [
-                {
-                    "path": "/labella.js/src/core",
-                    "files": [
-                        {
-                            "path": "/labella.js/src/core/distributor.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 271
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/core/force.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 295
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/core/helper.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 51
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/core/metrics.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 178
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/core/nodeGroup.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 125
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/core/node.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 185
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/core/node.spec.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 46
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/core/physics",
                             "files": [
                                 {
-                                    "path": "/labella.js/src/core/physics/coulomb.js",
-                                    "files": [],
+                                    "files": [
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/1e21.js",
+                                            "contributions": {
+                                                "robert": 2,
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/array1.js",
+                                            "contributions": {
+                                                "mihai": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/array2.js",
+                                            "contributions": {
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/array3.js",
+                                            "contributions": {
+                                                "mihai": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/array4.js",
+                                            "contributions": {
+                                                "mihai": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/assignment.js",
+                                            "contributions": {
+                                                "emil": 9,
+                                                "mihai": 4
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/concatstring.js",
+                                            "contributions": {
+                                                "emil": 6,
+                                                "mihai": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/const.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/div-with-regexp.js",
+                                            "contributions": {
+                                                "richard": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/empty-blocks.js",
+                                            "contributions": {
+                                                "ville": 2,
+                                                "cadorn": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/forstatement.js",
+                                            "contributions": {
+                                                "emil": 3,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/if.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/if-not.js",
+                                            "contributions": {
+                                                "robert": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/ifreturn2.js",
+                                            "contributions": {
+                                                "ville": 2,
+                                                "johnjbarton": 1,
+                                                "matt": 1,
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/ifreturn.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/infinite.js",
+                                            "contributions": {
+                                                "robert": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue10.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue11.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue13.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue14.js",
+                                            "contributions": {
+                                                "paul": 4,
+                                                "emil": 1,
+                                                "mihai": 4
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue16.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue17.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue20.js",
+                                            "contributions": {
+                                                "emil": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue21.js",
+                                            "contributions": {
+                                                "emil": 5,
+                                                "mihai": 4
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue25.js",
+                                            "contributions": {
+                                                "emil": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue278.js",
+                                            "contributions": {
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue27.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue28.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue29.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue30.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue349.js",
+                                            "contributions": {
+                                                "paul": 2,
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue34.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue353.js",
+                                            "contributions": {
+                                                "paul": 2,
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue372.js",
+                                            "contributions": {
+                                                "mal": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue471.js",
+                                            "contributions": {
+                                                "andrey": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue48.js",
+                                            "contributions": {
+                                                "emil": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue4.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue50.js",
+                                            "contributions": {
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue53.js",
+                                            "contributions": {
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue54.1.js",
+                                            "contributions": {
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue68.js",
+                                            "contributions": {
+                                                "ville": 2,
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue69.js",
+                                            "contributions": {
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issue9.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/issues222_324.js",
+                                            "contributions": {
+                                                "robert": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/mangle.js",
+                                            "contributions": {
+                                                "johnjbarton": 1,
+                                                "matt": 1,
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/null_string.js",
+                                            "contributions": {
+                                                "ville": 1,
+                                                "paul": 1,
+                                                "matt": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/strict-equals.js",
+                                            "contributions": {
+                                                "satyr": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/var.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/whitespace.js",
+                                            "contributions": {
+                                                "ville": 1,
+                                                "paul": 1,
+                                                "mihai": 5
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/expected/with.js",
+                                            "contributions": {
+                                                "ville": 2,
+                                                "johnjbarton": 1,
+                                                "eirikur": 1,
+                                                "mihai": 5
+                                            }
+                                        }
+                                    ],
+                                    "path": "/UglifyJS/test/unit/compress/expected",
                                     "contributions": {
-                                        "kwongsuphasawat": 24
+                                        "paul": 10,
+                                        "cadorn": 1,
+                                        "robert": 5,
+                                        "mal": 1,
+                                        "eirikur": 1,
+                                        "mihai": 64,
+                                        "andrey": 1,
+                                        "emil": 43,
+                                        "ville": 10,
+                                        "johnjbarton": 3,
+                                        "satyr": 1,
+                                        "matt": 3,
+                                        "richard": 1
                                     }
                                 },
                                 {
-                                    "path": "/labella.js/src/core/physics/spring.js",
-                                    "files": [],
+                                    "files": [
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/1e21.js",
+                                            "contributions": {
+                                                "robert": 2,
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/array1.js",
+                                            "contributions": {
+                                                "mihai": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/array2.js",
+                                            "contributions": {
+                                                "mihai": 4
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/array3.js",
+                                            "contributions": {
+                                                "mihai": 4
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/array4.js",
+                                            "contributions": {
+                                                "mihai": 6
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/assignment.js",
+                                            "contributions": {
+                                                "emil": 26,
+                                                "mihai": 60
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/concatstring.js",
+                                            "contributions": {
+                                                "emil": 12,
+                                                "mihai": 9
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/const.js",
+                                            "contributions": {
+                                                "emil": 5
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/div-with-regexp.js",
+                                            "contributions": {
+                                                "richard": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/empty-blocks.js",
+                                            "contributions": {
+                                                "cadorn": 4,
+                                                "mihai": 8
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/forstatement.js",
+                                            "contributions": {
+                                                "emil": 10,
+                                                "mihai": 20
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/if.js",
+                                            "contributions": {
+                                                "emil": 6
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/if-not.js",
+                                            "contributions": {
+                                                "robert": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/ifreturn2.js",
+                                            "contributions": {
+                                                "johnjbarton": 16,
+                                                "matt": 16,
+                                                "mihai": 16
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/ifreturn.js",
+                                            "contributions": {
+                                                "emil": 9
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/infinite.js",
+                                            "contributions": {
+                                                "robert": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue10.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue11.js",
+                                            "contributions": {
+                                                "emil": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue13.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue14.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue16.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue17.js",
+                                            "contributions": {
+                                                "emil": 4
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue20.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue21.js",
+                                            "contributions": {
+                                                "emil": 6
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue25.js",
+                                            "contributions": {
+                                                "emil": 7
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue278.js",
+                                            "contributions": {
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue27.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue28.js",
+                                            "contributions": {
+                                                "emil": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue29.js",
+                                            "contributions": {
+                                                "emil": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue30.js",
+                                            "contributions": {
+                                                "emil": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue349.js",
+                                            "contributions": {
+                                                "paul": 50,
+                                                "mihai": 25
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue34.js",
+                                            "contributions": {
+                                                "emil": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue353.js",
+                                            "contributions": {
+                                                "paul": 8,
+                                                "mihai": 4
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue372.js",
+                                            "contributions": {
+                                                "mal": 32
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue471.js",
+                                            "contributions": {
+                                                "andrey": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue48.js",
+                                            "contributions": {
+                                                "emil": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue4.js",
+                                            "contributions": {
+                                                "emil": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue50.js",
+                                            "contributions": {
+                                                "mihai": 9
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue53.js",
+                                            "contributions": {
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue54.1.js",
+                                            "contributions": {
+                                                "mihai": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue68.js",
+                                            "contributions": {
+                                                "mihai": 5
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue69.js",
+                                            "contributions": {
+                                                "mihai": 1
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issue9.js",
+                                            "contributions": {
+                                                "emil": 4
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/issues222_324.js",
+                                            "contributions": {
+                                                "robert": 82,
+                                                "mihai": 164
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/mangle.js",
+                                            "contributions": {
+                                                "johnjbarton": 5,
+                                                "matt": 5,
+                                                "mihai": 5
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/null_string.js",
+                                            "contributions": {
+                                                "ville": 1,
+                                                "paul": 1,
+                                                "matt": 1,
+                                                "mihai": 2
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/strict-equals.js",
+                                            "contributions": {
+                                                "satyr": 3,
+                                                "mihai": 6
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/var.js",
+                                            "contributions": {
+                                                "emil": 3
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/whitespace.js",
+                                            "contributions": {
+                                                "ville": 21,
+                                                "paul": 21,
+                                                "mihai": 105
+                                            }
+                                        },
+                                        {
+                                            "files": [],
+                                            "path": "/UglifyJS/test/unit/compress/test/with.js",
+                                            "contributions": {
+                                                "johnjbarton": 2,
+                                                "eirikur": 2,
+                                                "mihai": 6
+                                            }
+                                        }
+                                    ],
+                                    "path": "/UglifyJS/test/unit/compress/test",
                                     "contributions": {
-                                        "kwongsuphasawat": 22
+                                        "paul": 80,
+                                        "cadorn": 4,
+                                        "robert": 86,
+                                        "mal": 32,
+                                        "eirikur": 2,
+                                        "mihai": 472,
+                                        "andrey": 1,
+                                        "emil": 115,
+                                        "ville": 22,
+                                        "johnjbarton": 23,
+                                        "satyr": 3,
+                                        "matt": 22,
+                                        "richard": 1
                                     }
                                 }
                             ],
+                            "path": "/UglifyJS/test/unit/compress",
                             "contributions": {
-                                "kwongsuphasawat": 46
+                                "paul": 90,
+                                "cadorn": 5,
+                                "robert": 91,
+                                "mal": 33,
+                                "eirikur": 3,
+                                "mihai": 536,
+                                "andrey": 2,
+                                "emil": 158,
+                                "ville": 32,
+                                "johnjbarton": 26,
+                                "satyr": 4,
+                                "matt": 25,
+                                "richard": 2
                             }
                         },
                         {
-                            "path": "/labella.js/src/core/renderer.js",
                             "files": [],
+                            "path": "/UglifyJS/test/unit/scripts.js",
                             "contributions": {
-                                "kwongsuphasawat": 334
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/core/simulator.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 320
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/core/util.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 160
+                                "paul": 4,
+                                "emil": 56,
+                                "wolfgang": 2,
+                                "johnjbarton": 59,
+                                "matt": 118,
+                                "mihai": 150
                             }
                         }
                     ],
+                    "path": "/UglifyJS/test/unit",
                     "contributions": {
-                        "kwongsuphasawat": 2011
-                    }
-                },
-                {
-                    "path": "/labella.js/src/labella.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 34
-                    }
-                },
-                {
-                    "path": "/labella.js/src/lib",
-                    "files": [
-                        {
-                            "path": "/labella.js/src/lib/d3Dispatch.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 153
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/lib/d3Rebind.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 28
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/lib/extend.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 123
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/lib/intervalTree.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 326
-                            }
-                        },
-                        {
-                            "path": "/labella.js/src/lib/sortedList.js",
-                            "files": [],
-                            "contributions": {
-                                "kwongsuphasawat": 229
-                            }
-                        }
-                    ],
-                    "contributions": {
-                        "kwongsuphasawat": 859
-                    }
-                },
-                {
-                    "path": "/labella.js/src/prefix.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 30
-                    }
-                },
-                {
-                    "path": "/labella.js/src/suffix.js",
-                    "files": [],
-                    "contributions": {
-                        "kwongsuphasawat": 7
+                        "paul": 94,
+                        "cadorn": 5,
+                        "robert": 91,
+                        "mal": 33,
+                        "eirikur": 3,
+                        "mihai": 686,
+                        "andrey": 2,
+                        "wolfgang": 2,
+                        "emil": 214,
+                        "ville": 32,
+                        "johnjbarton": 85,
+                        "satyr": 4,
+                        "matt": 143,
+                        "richard": 2
                     }
                 }
             ],
+            "path": "/UglifyJS/test",
             "contributions": {
-                "kwongsuphasawat": 2941
+                "andrey": 2,
+                "cadorn": 5,
+                "robert": 91,
+                "wolfgang": 2,
+                "eirikur": 3,
+                "mihai": 3971,
+                "paul": 1493,
+                "mal": 33,
+                "emil": 214,
+                "ville": 32,
+                "johnjbarton": 85,
+                "satyr": 4,
+                "matt": 143,
+                "richard": 2
             }
         },
         {
-            "path": "/labella.js/test",
             "files": [
                 {
-                    "path": "/labella.js/test/karma-main.js",
                     "files": [],
+                    "path": "/UglifyJS/tmp/hoist.js",
                     "contributions": {
-                        "kwongsuphasawat": 52
+                        "johnjbarton": 33,
+                        "mihai": 72
+                    }
+                },
+                {
+                    "files": [],
+                    "path": "/UglifyJS/tmp/instrument.js",
+                    "contributions": {
+                        "mihai": 97
+                    }
+                },
+                {
+                    "files": [],
+                    "path": "/UglifyJS/tmp/test.js",
+                    "contributions": {
+                        "johnjbarton": 16,
+                        "mihai": 46
                     }
                 }
             ],
+            "path": "/UglifyJS/tmp",
             "contributions": {
-                "kwongsuphasawat": 52
+                "johnjbarton": 49,
+                "mihai": 215
+            }
+        },
+        {
+            "files": [],
+            "path": "/UglifyJS/uglify-js.js",
+            "contributions": {
+                "aaron": 19,
+                "michael": 2,
+                "robert": 3,
+                "mihai": 46
             }
         }
     ],
+    "path": "/UglifyJS",
     "contributions": {
-        "nathaniel": 101,
-        "krist": 202,
-        "james,": 2,
-        "kwongsuphasawat": 8910
+        "thorn0": 4,
+        "cadorn": 177,
+        "quildreen": 2,
+        "mal": 115,
+        "eirikur": 138,
+        "tav": 30,
+        "chrisk": 4,
+        "thomas": 8,
+        "mihai": 29441,
+        "tim": 82,
+        "mathias": 4,
+        "whyme.lyu": 4,
+        "jann": 15,
+        "ville": 37,
+        "nick": 9,
+        "satyr": 19,
+        "matt": 230,
+        "richard": 13,
+        "ikokostya": 71,
+        "slavic": 9,
+        "robert": 2796,
+        "fintan": 2,
+        "wolfgang": 20,
+        "cedric": 13,
+        "chris": 4,
+        "paul": 3032,
+        "naomi": 1,
+        "andrey": 7,
+        "micka\u00ebl": 2,
+        "michael": 14,
+        "marijn": 16,
+        "jez": 4,
+        "jason": 4,
+        "aaron": 19,
+        "johnjbarton": 645,
+        "isaac": 2,
+        "joseph": 1,
+        "emil": 725
     }
 }
