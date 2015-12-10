@@ -7,6 +7,7 @@ github repo visualization tool
 ## demo instructions
 
 left click to enter folder
+
 right click on folder/file to view contributions
 
 when hovering metadata can be viewed in the bottom left
