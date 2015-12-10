@@ -220,7 +220,7 @@
 					info.innerText = n.name + ' - ' + n.value + ' changes - ' + (n.value/n.parent.value*100).toPrecision(3) + '%';
 				}
 
-				stackBlurCanvasRGBA('canvas', n.x+dir.x, n.y+dir.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad), Math.log(n.area));
+				// stackBlurCanvasRGBA('canvas', n.x+dir.x, n.y+dir.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad), Math.log(n.area));
 				ctx.fillStyle = bgcolor;
 				ctx.fillRect(n.x+dir.x, n.y+dir.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad));
 				ctx.fillStyle = txtcolor;
@@ -259,7 +259,7 @@
 				info.innerText = n.name + ' - ' + n.value + ' changes - ' + (n.value/n.parent.value*100).toPrecision(3) + '%';
 			}
 
-			stackBlurCanvasRGBA('canvas', n.x, n.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad), Math.log(n.area));
+			// stackBlurCanvasRGBA('canvas', n.x, n.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad), Math.log(n.area));
 			ctx.fillStyle = bgcolor;
 			ctx.fillRect(n.x, n.y, Math.max(0, n.dx-pad), Math.max(0, n.dy-pad));
 			ctx.fillStyle = txtcolor;
