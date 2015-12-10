@@ -6,6 +6,11 @@ github repo visualization tool
 
 ## demo instructions
 
+left click to enter folder
+right click on folder/file to view contributions
+
+when hovering metadata can be viewed in the bottom left
+
 press `space` to view contributions for entire folder
 `alt` key is shortcut for going back, the left arrow does the same thing
 pressing `enter` after typing in directory is a short cut of going to that directory, the right arrow does the same thing
